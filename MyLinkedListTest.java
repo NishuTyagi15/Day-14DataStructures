@@ -23,6 +23,20 @@ public class MyLinkedListTest {
 		}
 		
 	}
+	
+	public void append(INode myNode) {
+		if (this.head == null) { // TODO Auto-generated method stub
+			this.head = myNode;
+		}
+		if (this.tail == null) {
+			this.tail = myNode;
+		}
+		else {
+			this.tail.setNext(myNode);
+			this.tail = myNode;
+		}
+	}
+	
 	public void printMyNodes() {
 		StringBuffer myNodes = new StringBuffer("My Nodes are : ");
 		INode tempNode = head;
