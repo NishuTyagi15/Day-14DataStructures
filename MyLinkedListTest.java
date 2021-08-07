@@ -1,6 +1,6 @@
 package LinkedListProblems;
 
-public class MyLinkedListTest {
+public class MyLinkedListTest<K> {
 	public INode head;
 	public INode tail;
 	
@@ -78,5 +78,26 @@ public class MyLinkedListTest {
 		tempNode = tempNode.getNext();
 		return tempNode;
 		
+	}
+
+	public  INode search(K key) { 
+        int i = 1;  
+        boolean flag = false;  
+      
+	INode tempNode = head;
+	while(tempNode != null && tempNode.getNext()  != null) {
+		
+	    Object data = 30;
+		if(tempNode.getKey() == data) {  
+                flag = true;  
+                break;  
+        }  
+        i++;  
+        tempNode = tempNode.getNext();  
+    }   
+    if(flag) {
+    	System.out.println("Element is present in the list at the position : " + i);
+    }
+	return tempNode;      
 	}
 }
