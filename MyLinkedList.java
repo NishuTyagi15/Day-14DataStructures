@@ -5,7 +5,7 @@ import org.junit.Test;
 
 public class MyLinkedList {
 	@Test
-	public void givenFirstElementWhenDeletedShouldPassLinkedListResult() {
+	public void givenLastElementWhenDeletedShouldPassLinkedListTest() {
 		
 		MyNode <Integer> myFirstNode = new MyNode<>(56);
 		MyNode <Integer> mySecondNode = new MyNode<>(30);

@@ -76,7 +76,6 @@ public class MyLinkedListTest {
 		}
 		this.tail = tempNode;
 		tempNode = tempNode.getNext();
-		return tempNode;
-		
+		return tempNode;	
 	}
 }
