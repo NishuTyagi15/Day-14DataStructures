@@ -1,7 +1,23 @@
 package LinkedListProblems;
 
+import org.junit.Assert;
+import org.junit.Test;
+
 public class MyLinkedList {
-	public static void main (String[] args) {
-		System.out.println("Welcome to the LinkedList Problems");
+	@Test
+	public void given3NumbersWhenLinkedShouldPassedLinkedListTest() {
+		
+		MyNode<Integer> myFirstNode = new MyNode<>(56);
+		MyNode<Integer> mySecondNode = new MyNode<>(30);
+		MyNode<Integer> myThirdNode = new MyNode<>(70);
+			
+		myFirstNode.setNext(mySecondNode);
+		mySecondNode.setNext(myThirdNode);
+			
+		boolean result = myFirstNode.getNext().equals(mySecondNode) &&
+					       mySecondNode.getNext().equals(myThirdNode);
+		Assert.assertTrue(result);
+					
 	}
+
 }
