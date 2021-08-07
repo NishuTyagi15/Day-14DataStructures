@@ -48,4 +48,12 @@ public class MyLinkedListTest {
 		myNodes.append(tempNode.getKey());
 		System.out.println(myNodes);
 	}
+
+	public void insert(INode myNode, INode newNode) {
+
+		INode tempNode = myNode.getNext(); // TODO Auto-generated method stub
+		myNode.setNext(newNode);
+		newNode.setNext(tempNode);
+		
+	}
 }
