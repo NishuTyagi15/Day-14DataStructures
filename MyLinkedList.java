@@ -5,39 +5,21 @@ import org.junit.Test;
 
 public class MyLinkedList {
 	@Test
-	public void given3NumbersWhenAddedToLinkedListShouldBeAddedToTop() {
+	public void given3NumbersWhenInsertingSecondInBetweenShouldPassLinkedList() {
 		
-		MyNode<Integer> myFirstNode = new MyNode<>(70);
+		MyNode<Integer> myFirstNode = new MyNode<>(56);
 		MyNode<Integer> mySecondNode = new MyNode<>(30);
-		MyNode<Integer> myThirdNode = new MyNode<>(56);
-		MyLinkedListTest myLinkedListTest = new MyLinkedListTest();
-		myLinkedListTest.add(myFirstNode);
-		myLinkedListTest.add(mySecondNode);
-		myLinkedListTest.add(myThirdNode);
-		myLinkedListTest.printMyNodes();
-		
-		boolean result = myLinkedListTest.head.equals(myThirdNode) && 
-				         myLinkedListTest.head.getNext().equals(mySecondNode) &&
-				         myLinkedListTest.tail.equals(myFirstNode);
-		Assert.assertTrue(result);
-					
-	}
-	
-	@Test
-	public void given3NumbersWhenInsertingSecondInBetweenShouldPassLinkedListResult() {
-		MyNode <Integer> myFirstNode = new MyNode<>(56);
-		MyNode <Integer> mySecondNode = new MyNode<>(30);
-		MyNode <Integer> myThirdNode = new MyNode<>(70);
+		MyNode<Integer> myThirdNode = new MyNode<>(70);
 		MyLinkedListTest myLinkedListTest = new MyLinkedListTest();
 		myLinkedListTest.add(myFirstNode);
 		myLinkedListTest.append(myThirdNode);
 		myLinkedListTest.insert(myFirstNode, mySecondNode);
+		myLinkedListTest.printMyNodes();
 		
 		boolean result = myLinkedListTest.head.equals(myFirstNode) && 
-		         myLinkedListTest.head.getNext().equals(mySecondNode)  && 
-		         myLinkedListTest.tail.equals(myThirdNode);
+				         myLinkedListTest.head.getNext().equals(mySecondNode) &&
+				         myLinkedListTest.tail.equals(myThirdNode);
 		Assert.assertTrue(result);
-		
+					
 	}
-
 }
