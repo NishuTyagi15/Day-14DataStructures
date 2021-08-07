@@ -42,7 +42,11 @@ public class MyLinkedListTest {
 		INode tempNode = head;
 		while (tempNode.getNext() != null) {
 			myNodes.append(tempNode.getKey());
-			if(!tempNode.equals(tail)) myNodes.append("->");
+			if(!tempNode.equals(tail)) {
+				myNodes.append("->");
+			} else {
+				myNodes.append(" ");
+			}
 			tempNode = tempNode.getNext();
 		}
 		myNodes.append(tempNode.getKey());
@@ -60,6 +64,18 @@ public class MyLinkedListTest {
 	public INode pop() {
 		INode tempNode = this.head; // TODO Auto-generated method stub
 		this.head = head.getNext();
+		return tempNode;
+		
+	}
+
+	public INode popLast() {
+
+		INode tempNode = head; // TODO Auto-generated method stub
+		while(!tempNode.getNext().equals(tail)) {
+			tempNode = tempNode.getNext();
+		}
+		this.tail = tempNode;
+		tempNode = tempNode.getNext();
 		return tempNode;
 		
 	}
