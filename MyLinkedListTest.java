@@ -56,4 +56,11 @@ public class MyLinkedListTest {
 		newNode.setNext(tempNode);
 		
 	}
+
+	public INode pop() {
+		INode tempNode = this.head; // TODO Auto-generated method stub
+		this.head = head.getNext();
+		return tempNode;
+		
+	}
 }
