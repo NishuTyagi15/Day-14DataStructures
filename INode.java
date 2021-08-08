@@ -1,6 +1,8 @@
 package LinkedListProblems;
 
-public interface INode<K> {
+public interface INode <K> {
+	INode next = null;
+	INode data = null;
 	K getKey();
 	void setKey(K key);
 	
