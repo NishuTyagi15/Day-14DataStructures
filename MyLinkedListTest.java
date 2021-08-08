@@ -45,7 +45,7 @@ public class MyLinkedListTest<K> {
 			if(!tempNode.equals(tail)) {
 				myNodes.append("->");
 			} else {
-				myNodes.append(" ");
+				myNodes.append("->");
 			}
 			tempNode = tempNode.getNext();
 		}

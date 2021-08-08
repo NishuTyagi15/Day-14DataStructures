@@ -14,7 +14,7 @@ public class MyLinkedList {
 		myLinkedListTest.add(myFirstNode);
 		myLinkedListTest.append(mySecondNode);
 		myLinkedListTest.append(myFourthNode);
-		myLinkedListTest.insert(mySecondNode, myThirdNode);
+		myLinkedListTest.popLast();
 		myLinkedListTest.printMyNodes();
 		
 		boolean result = myLinkedListTest.head.equals(myFirstNode) && 
