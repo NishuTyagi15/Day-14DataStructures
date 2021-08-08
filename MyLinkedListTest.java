@@ -79,6 +79,58 @@ public class MyLinkedListTest<K> {
 		return tempNode;
 		
 	}
+	
+	public void popEle(K key) {
+		INode<K> tempNode = this.head;
+		INode<K> temp;
+		while(tempNode!=null) {
+			temp = tempNode;
+			if(tempNode.getNext().getKey() == key) {
+				temp.setNext(tempNode.getNext().getNext());
+				tempNode.getNext().setNext(null);
+				System.out.println("Element deleted: " + key);
+				break;
+			}
+			tempNode=tempNode.getNext();
+			if(tempNode.getNext()==null && tempNode.getKey()!= key)
+			{
+				System.out.println("Element "+key+" not found");
+				break;
+			}
+		}	
+	}
+
+	public void delete(K key) {
+		INode<K> tempNode = this.head;
+		INode<K> tempNode1 = this.head;
+		int i=1,length=0;
+		while(tempNode!=null) {
+			if(tempNode.getKey() == key) {
+				break;
+			}
+			i++;
+			tempNode=tempNode.getNext();
+			if(tempNode.getNext()==null && tempNode.getKey()!= key)
+			{
+				System.out.println("Element "+key+" not found");
+				break;
+			}
+		}
+		while(tempNode1!=null) {
+			length++;
+			tempNode1=tempNode1.getNext();
+		}
+		if(i==1){
+			pop();
+		}
+		else if(i==length) {
+			popLast();
+		}
+		else {
+			popEle(key);
+		}
+	}
+	
 
 	public  INode search(K key) { 
         int i = 1;  
